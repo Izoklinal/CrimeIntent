@@ -1,5 +1,6 @@
 package com.example.criminalintent
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class CrimeListViewModel : ViewModel() {
@@ -11,6 +12,7 @@ class CrimeListViewModel : ViewModel() {
             val crime = Crime()
             crime.title = "Crime #$i"
             crime.isSolved = i % 2 == 0
+            crime.requiresPolice = i % 2 == 0
             crimes += crime
         }
     }
